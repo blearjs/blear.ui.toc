@@ -148,7 +148,10 @@ proto[_intTree] = function () {
         });
     };
 
-    build(0, tree, the[_headingList][0].order);
+    if (the[_headingList].length) {
+        build(0, tree, the[_headingList][0].order);
+    }
+
     the[_headingTree] = tree.children;
 };
 
