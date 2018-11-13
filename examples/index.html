@@ -18,10 +18,91 @@
     <meta name="description" content="描述语句">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <title>index.html</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .article {
+            width: 500px;
+            border: 1px solid #ff4d6f;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+            margin-bottom: 200px;
+        }
+
+        h1 {
+            padding-left: 0;
+            font-size: 32px;
+        }
+
+        h2 {
+            padding-left: 20px;
+            font-size: 28px;
+        }
+
+        h3 {
+            padding-left: 40px;
+            font-size: 24px;
+        }
+
+        h4 {
+            padding-left: 60px;
+            font-size: 20px;
+        }
+
+        h5 {
+            padding-left: 80px;
+            font-size: 16px;
+        }
+
+        h6 {
+            padding-left: 100px;
+            font-size: 12px;
+        }
+
+        #toc {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        ol {
+            list-style: disc;
+        }
+
+        .toc li ol{
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body ontouchstart="">
 
 <h1>example</h1>
+
+<div id="article" class="article">
+    <h1>标题1</h1>
+    <h2>标题1-1</h2>
+    <h2>标题1-2</h2>
+    <h2>标题1-3</h2>
+    <h1 id="biaoti2">标题2</h1>
+    <h2>标题2-1</h2>
+    <h3>标题2-1-1</h3>
+    <h4>标题2-1-1-1</h4>
+    <h5>标题2-1-1-1-1</h5>
+    <h6>标题2-1-1-1-1-1</h6>
+    <h1>标题3</h1>
+    <h3>标题3-1<strong>（写错 heading）</strong></h3>
+    <h1>标题4</h1>
+    <h1>标题5</h1>
+    <h1>标题6</h1>
+</div>
+
+<div id="toc"></div>
 
 <script src="/node_modules/coolie.js/coolie.js"
 data-config="/examples/coolie-config.js"

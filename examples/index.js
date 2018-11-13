@@ -7,6 +7,11 @@
 
 'use strict';
 
+var TOC = require('../src/index');
 
 
+new TOC({
+    tocEl: '#toc',
+    contentEl: '#article'
+});
 

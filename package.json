@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "内容目录 UI 类",
   "scripts": {
-    "live": "browser-sync start --config bs-config.js",
-    "test": "node ./node_modules/.bin/karma start karma.conf.js --single-run",
-    "prepublish": "npm test"
+    "live": "browser-sync start --config bs-config.js"
   },
   "preferGlobal": false,
   "bin": {},
@@ -33,7 +31,15 @@
   "bugs": {
     "url": "https://github.com/blearjs/blear.ui.toc/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "blear.core.attribute": "^1.0.14",
+    "blear.core.modification": "^1.0.7",
+    "blear.core.selector": "^1.0.11",
+    "blear.ui": "^1.0.10",
+    "blear.utils.array": "^1.0.12",
+    "blear.utils.object": "^1.0.14",
+    "blear.utils.string": "^1.0.11"
+  },
   "peerDependencies": {},
   "devDependencies": {
     "coolie.js": "^2.3.1"
