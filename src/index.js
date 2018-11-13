@@ -34,7 +34,12 @@ var defaults = {
     /**
      * 列表样式名
      */
-    listClassName: 'toc'
+    listClassName: 'toc-list',
+
+    /**
+     * 项目样式名
+     */
+    itemClassName: 'toc-item'
 };
 var TOC = UI.extend({
     className: 'TOC',
@@ -156,13 +161,18 @@ proto[_generateHTML] = function () {
     var the = this;
     var options = the[_options];
     var tagName = options.listTagName;
+    var listClassName = options.listClassName;
+    var itemClassName = options.itemClassName;
     var walk = function (children, root) {
-        var attrs = root ? ' class="' + options.listClassName + '"' : '';
+        var firstNode = children[0];
+        var indent = firstNode.indent;
+        var attrs = ' class="' + listClassName + ' ' + listClassName + '_' + indent + '"';
         var outerOpen = '<' + tagName + attrs + '>';
         var outerClose = '</' + tagName + '>';
         var outerCenter = '';
         array.each(children, function (index, node) {
-            var innerOpen = '<li>';
+            var attrs = 'class="' + itemClassName + ' ' + itemClassName + '_' + indent + '"';
+            var innerOpen = '<li ' + attrs + '>';
             var innerClose = '</li>';
             var headingEl = node.el;
             var text = headingEl.innerText.trim();
