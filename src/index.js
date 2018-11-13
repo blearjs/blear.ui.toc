@@ -192,7 +192,9 @@ proto[_generateHTML] = function () {
         return outerOpen + outerCenter + outerClose;
     };
 
-    the[_tocEl].innerHTML = walk(the[_headingTree], true);
+    if (the[_headingTree].length) {
+        the[_tocEl].innerHTML = walk(the[_headingTree], true);
+    }
 };
 
 TOC.defaults = defaults;
